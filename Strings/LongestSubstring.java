@@ -1,8 +1,8 @@
-package Collection;
+package Strings;
 
 import java.util.*;
 
-public class Practice {
+public class LongestSubstring {
     public static void main(String[] args) {
         // Set
         HashSet <Integer> set =new HashSet<>();
