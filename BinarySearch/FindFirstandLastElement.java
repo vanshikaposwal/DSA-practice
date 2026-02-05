@@ -1,4 +1,5 @@
-class FindFirstandLastElement{
+
+public class FindFirstandLastElement{
     public static void main(String[] args){
         int[] arr={5,5,5,5,7,8,9,11,21,31,42,55,55,55};
         int element = 55;
