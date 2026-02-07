@@ -1,39 +1,43 @@
+import java.util.Arrays;
+
 public class Practice {
     public static void main(String[] args) {
-        int n=5;
-        char ch;
-        for(int i=1; i<n; i++){
-            for(int j=1; j<(n-i);j++ ){
-                System.out.print(" ");
+        int[] nums1={1,4,6,7,0,0,0,0,0};
+        int m = 4;
+        int[] nums2 = {1,2,3,4,5};
+        int n = nums2.length;
+
+        int k = m+n-1;
+        int i=m-1,j=n-1;
+        while(i>=0 && j>=0){
+            if(nums1[i]>=nums2[j]){
+                nums1[k--] = nums1[i--];
             }
-            ch ='A';
-            for(int j=0; j<i; j++){
-                System.out.print(ch);
-                ch++;
+            else{
+                nums1[k--] = nums2[j--];
             }
-            ch--;
-            for(int k=i-1; k >0; k--){
-                ch--;
-                System.out.print(ch);
-                
-            }
-            System.out.println();
         }
-            System.out.println();
-            System.out.println();
-            System.out.println();
 
-            for(int i=1; i<=n; i++){
-                for(int j=1; j<2*n; j++){
-                    if(j<=i||j>=2*n-i){
-                        System.out.print(n+1-j);
-                    }else{
-                        System.out.print(n+1-i);
-                    }
-                }
-                System.out.println();
+        while(j>=0){
+            nums1[k--] = nums2[j--];
+        }
+            
+        System.out.println(Arrays.toString(nums1));
+
+    }
+
+    public static void merge(int[] nums1, int m, int[] nums2, int n) {
+        int length = m+n;
+        int[] nums = new int[length];
+        int k =-1;
+        int i=0,j=0;
+        while(i<m && j<n){
+            while(i<m && nums1[i]<nums2[j]){
+                nums[++k] = nums1[i++];
             }
-
-        
+            while(j<n && nums2[j]<nums1[i]){
+                nums[++k] = nums2[j++];
+            }
+        }
     }
 }

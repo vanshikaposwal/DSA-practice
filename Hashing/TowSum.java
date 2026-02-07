@@ -12,15 +12,18 @@ public class TowSum{
         HashMap<Integer,Integer> map = new HashMap<>();
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();
         for(int i=0; i<array.length; i++){
+            // diffrence
             int diff = target - array[i];
+            
+            // if diffence presents add to list
             if(map.containsKey(diff)){
                 // Found a pair
                 ArrayList<Integer> pair = new ArrayList<>();
                 pair.add(i);
                 pair.add(map.get(diff));
-                list.add(pair);
+                list.add(pair);// storing pairs
             }
-            map.put(array[i],i);
+            map.put(array[i],i);// only stores value whose diff is not present
         }
         return list;
 

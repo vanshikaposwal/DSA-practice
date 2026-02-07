@@ -1,3 +1,5 @@
+package Array;
+
 class FirstLastOccurance{
     public static void main (String[] args){
         int[] array ={2,7,2,7,3,6,9,1};
