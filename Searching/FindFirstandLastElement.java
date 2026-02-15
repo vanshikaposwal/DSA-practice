@@ -1,4 +1,4 @@
-
+package Searching;
 public class FindFirstandLastElement{
     public static void main(String[] args){
         int[] arr={5,5,5,5,7,8,9,11,21,31,42,55,55,55};
@@ -18,9 +18,9 @@ public class FindFirstandLastElement{
         int left = 0;//left pointer
         int right =length-1;//right pointer
         int mid;
-        // Traversing loop
+        // Traversing loop the while loop
         while(left<=right){
-            mid = left + (right-left)/2; 
+            mid = left + (right-left)/2;
             /*using this formula because if array is large 
             left+right can overflow*/
 

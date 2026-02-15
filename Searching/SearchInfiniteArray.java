@@ -1,3 +1,5 @@
+package Searching;
+
 public class SearchInfiniteArray {
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,22,24,26,28,29,33,44,55,62,64,77,85,87,88,91,93,94,95,96,96,97,98,100};

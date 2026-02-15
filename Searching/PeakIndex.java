@@ -1,3 +1,5 @@
+package Searching;
+
 public class PeakIndex {
     public static void main(String[] args) {
         int[] arr= {1,7,5,3,1,0};
