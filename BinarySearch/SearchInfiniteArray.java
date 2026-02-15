@@ -1,4 +1,4 @@
-package Searching;
+
 
 public class SearchInfiniteArray {
     public static void main(String[] args) {
