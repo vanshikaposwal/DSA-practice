@@ -1,3 +1,4 @@
+package BinarySearch;
 
 public class FindFirstandLastElement{
     public static void main(String[] args){

@@ -1,4 +1,4 @@
-
+package BinarySearch;
 
 public class SearchInfiniteArray {
     public static void main(String[] args) {
