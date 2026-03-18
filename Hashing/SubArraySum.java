@@ -6,20 +6,17 @@ public class SubArraySum {
         int[] arr = {1,1,1};
         System.out.println(subarraySum(arr, 2));
     }
-    public static int subarraySum(int[] nums, int k) {
+    public static int subarraySum(int[] numbs, int k) {
         int count=0;
         int sum =0;
         HashMap<Integer, Integer> map = new HashMap<>();
-        int right=0;
-        while(right<nums.length && nums[right]<=k ){
-            sum+=nums[right];
-            int remaining = k-sum;
-            if(map.containsKey(remaining)){
-                count ++;
-                sum = 0;
+        map.put(0,1); // else subarrays starting from index 0 will skip...
+        for(int i=0; i<numbs.length; i++){
+            sum+= numbs[i];
+            if(map.containsKey(sum-k)){
+                count+= map.get(sum-k);
             }
-            map.put(nums[right], right);
-            right++;
+            map.put(sum, map.getOrDefault(sum, 0)+1);
         }
         return count;
     }
