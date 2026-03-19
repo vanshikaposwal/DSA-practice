@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class MejorityElement {
     public static void main(String[] args){
-        int[] arr = {7, 0, 0, 1, 7, 7, 2, 7, 7};
-        System.out.println(majority(arr));
+        int[] arr = {7, 1, 0, 1, 1, 7, 1, 1, 7,1,1,0,1,1,6,1,0,1,4,};
+        System.out.println(majority_Wth_BM(arr));
     }
 
     static int majority(int[] arr){
@@ -25,5 +25,24 @@ public class MejorityElement {
             }
         }
         return 0;
+    }
+
+    // Using Boyer-Moore Algo --> Candidate with max votes will be the last
+
+    static int majority_Wth_BM(int[] arr){
+        int count=0;
+        int ele=0;
+        for(int i=0; i<arr.length; i++){
+            int curr = arr[i];
+            if(count ==0){
+                ele = arr[i];
+            }
+            if(ele == curr){
+                count++;
+            }else{
+                count--;
+            }
+        }
+        return ele;
     }
 }
