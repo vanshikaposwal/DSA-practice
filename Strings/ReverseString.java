@@ -2,9 +2,32 @@ package Strings;
 
 public class ReverseString {
     public static void main(String[] args){
-        String s = "the sky is blue";
-        System.out.println(reverseWords(s));
+        String s = "  1 4   7hgf   ";
+        System.out.println(reverseString(s));
     }
+
+    static String reverseString(String s){
+        String s1 = s.trim();
+
+        StringBuilder sb = new StringBuilder();
+        int j;
+        int i=s1.length()-1;
+        while (i>=0){
+            while(i>=0 && s1.charAt(i) == ' ') i--;
+
+            j=i;
+
+            while (j>=0 && s1.charAt(j) != ' ')j--;
+
+            sb.append(s1, j+1, i+1);
+
+            if(j>0) sb.append(' ');
+            i = j-1;
+        }
+        return sb.toString();
+    }
+
+
 
     static String reverseWords(String s) {
         StringBuilder sb =new StringBuilder();
