@@ -1,0 +1,25 @@
+package BinarySearch;
+
+public class Search_Insert_Position {
+    public static void main( String[] args){
+        int[] arr = {1,3,4,5,6};
+       System.out.println( insertPosition(arr, 2));
+    }
+
+    public static int insertPosition(int[] arr, int target){
+        int low =0; int high = arr.length-1;
+        int mid=0;
+        while(low<=high){
+            mid = low+ (high-low)/2;
+            if(arr[mid] == target){
+                return mid;
+            }else if(target > arr[mid]){
+                low = mid+1;
+            }else{
+                high = mid-1;
+            }
+        }
+        return low;
+    }
+
+}
