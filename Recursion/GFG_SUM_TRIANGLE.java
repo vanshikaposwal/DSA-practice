@@ -8,20 +8,20 @@ public class GFG_SUM_TRIANGLE {
 
     }
 
-    public ArrayList<Integer> getTriangle(int[] arr) {
-        // code here
-        ArrayList<Integer> list = new ArrayList<>();
-        for(int n: arr){
-            list.add(n);
-        }
+//    public ArrayList<Integer> getTriangle(int[] arr) {
+//        // code here
+//        ArrayList<Integer> list = new ArrayList<>();
+//        for(int n: arr){
+//            list.add(n);
+//        }
+//
+//        return helper(list, list.size());
+//    }
 
-        return helper(list, list.size());
-    }
-
-    public static ArrayList<Integer>helper(ArrayList<Integer> list, int count){
-        if(count == 0){
-            return list;
-        }
-        
-    }
+//    public static ArrayList<Integer>helper(ArrayList<Integer> list, int count){
+//        if(count == 0){
+//            return list;
+//        }
+//
+//    }
 }

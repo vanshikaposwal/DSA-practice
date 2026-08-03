@@ -35,6 +35,8 @@ public class Practice {
 
             nextPermutation(arr);
 
+//            list.add
+
         } while(!Arrays.equals(arr, original));
 
         System.out.println(count);

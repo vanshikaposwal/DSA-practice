@@ -20,7 +20,6 @@ public class LC1678 {
                 }
             }
         }
-
         return ans.toString();
     }
 }
